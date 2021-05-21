@@ -6,13 +6,24 @@ export default class App extends Component {
     state = {
         searchName: ''
     }
+    // show () {
+    //     console.log(this)
+    //     this.setState({
+    //       msg: '222'
+    //     }, () => {
+    //       console.log(this.state.msg) // 更新后的值222
+    //     })
+    //     console.log(this.state.msg) // 123
+    //   }
+
+
     setSearchName = (searchName) => {
-        alert(searchName)
-        alert(typeof(searchName))
+        let name=searchName
         this.setState({
-            searchName:`${searchName}`
+            searchName: name
+        },()=>{
+            console.log(this.state)
         })
-        alert(this.state.searchName)
     }
     render() {
         return (
